@@ -1,0 +1,29 @@
+CREATE TABLE custA (
+    cust_name VARCHAR(50),
+    cust_amount INT
+);
+insert into custA (cust_name, cust_amount)
+VALUES
+('Amit', 500),
+('Rahul', 700),
+('Priya', 900);
+
+
+CREATE TABLE custB (
+    cust_name VARCHAR(50),
+    cust_amount INT
+);
+
+INSERT INTO custB (cust_name, cust_amount)
+VALUES
+('Neha', 600),
+('Rahul', 700),
+('Amit', 500);
+
+select cust_name, cust_amount
+from custA
+
+union
+
+select cust_name,cust_amount
+from custB
